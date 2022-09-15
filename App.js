@@ -1,16 +1,30 @@
 import './App.css';
-import Greeting from './Greeting';
-import BookList from './BookList';
-import books from './data/books.js';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AddExercisePage from './pages/AddExercisePage';
+import EditExercisePage from './pages/EditExercisePage';
+import {useState} from 'react'
 
 function App() {
-  const name = "Nauman";
+  const [exerciseToEdit, setExercisesToEdit] = useState();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Greeting name={name} time={Date()}></Greeting>
-        <BookList books={books}></BookList>
-      </header>
+      <Router>
+        <div className="App-header">
+          <Route path="/" exact>
+            <HomePage setExercisesToEdit={setExercisesToEdit}/>
+          </Route>
+          <Route path="/add-exercise">
+            <AddExercisePage />
+          </Route>
+          <Route path="/edit-exercise">
+            <EditExercisePage exerciseToEdit={exerciseToEdit}/>
+          </Route>
+          </div>
+      </Router>
     </div>
   );
 }
