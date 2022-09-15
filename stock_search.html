@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Stock search Page</title>
+</head>
+
+<body>
+    <h1>Search Stocks</h1>
+    <form action="http://localhost:3000/stock-search" method="GET">
+        <fieldset>
+            <p>Find the stock with the 
+                <input type="radio" name= "search" id="highest" value="highest">
+                <label for="highest"><strong>highest price</strong> or the one with the</label>
+                <input type="radio" name= "search" id="lowest"value ="lowest"
+                <label for="lowest"><strong>lowest price</strong></label>
+            </p>
+            <button type="submit" value="Submit">Submit</button>
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>

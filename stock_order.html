@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Stock Order Page </title>
+</head>
+
+<body>
+    <h1>Stock Order Options</h1>
+    <table border="1"> 
+        
+        <tr>
+            <th>Company</th>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Splunk</td>
+            <td>SPLK</td>
+            <td>137.55</td>
+        </tr>
+        <tr>
+            <td>Microsoft</td>
+            <td>MSFT</td>
+            <td>232.04</td>
+        </tr>
+        <tr>
+            <td>Oracle</td>
+            <td>ORCL</td>
+            <td>67.08</td>
+        </tr>
+        <tr>
+            <td>Snowflake</td>
+            <td>SNOW</td>
+            <td>235.8</td>
+        </tr>
+        <tr>
+            <td>Teradata</td>
+            <td>TDC</td>
+            <td>44.98</td>
+        </tr>
+
+
+    </table>
+
+    
+    <form action="http://localhost:3000/review" method="GET">
+        
+        <label for="choose">Choose the symbol</label>
+        <select name="symbol">
+            <option value=SPLK>SPLK</option>
+            <option value=MSFT>MSFT</option>
+            <option value=ORCL>ORCL</option>
+            <option value=SNOW>SNOW</option>
+            <option value=TDC>TDC</option>
+        </select>and specify the quantity
+        
+        <input type="number" name="number" required="required"> for the stock you want to buy<br>
+        <button type="submit" value="Submit">Submit</button>
+
+    </form>
+    
+
+</body>
+
+</html>
